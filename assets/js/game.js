@@ -20,6 +20,7 @@ var enemyHealth = 50;
 var enemyAttack = 12;
 
 var fight = function(enemyName) {
+    while(enemyHealth > 0) {
   // Alert users that they are starting the round
     window.alert("Welcome to Robot Gladiators!");
     var promptFight = window.prompt("Would you like to FIGHT of SKIP this battle? Enter 'FIGHT' or 'Skip' to choose");
@@ -64,12 +65,15 @@ if (playerHealth <= 0) {
 
   else {
       fight();
-  }
+  } }
   
 };
 
 for(var i = 0; i < enemyNames.length; i++) {
-    fight(enemyNames[i]);
+    var pickedEnemyName = enemyNames[i];
+
+    //call fight function with enemy robots
+    fight(pickedEnemyName);
   }
 
 
